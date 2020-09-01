@@ -1,0 +1,42 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 24px;
+    color: #616161;
+    letter-spacing: -0.15px;
+    line-height: 48px;
+    text-align: left;
+    margin: 0;
+}
+
+header ul li {
+    display: flex;
+}
+
+.points {
+    background: #ededed;
+    border-radius: 100px;
+    width: 103px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    margin-left: 15px;
+}
+
+.points img {
+    margin-left: 5px;
+}
+
+.principal {
+    background-image: url('../assets/header-x1.png');
+    width: auto;
+    height: 412px;
+    background-size: 1440px 412px;
+}

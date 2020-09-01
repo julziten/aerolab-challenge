@@ -1,0 +1,27 @@
+<div class="filter">
+  <div class="product-amount">
+    <p>32 of 32 products</p>
+  </div>
+  <div class="price">
+    <p>Sort By:</p>
+    <ul>
+      <li (click)=mostRecent()>Most Recent</li>
+      <li (click)=lowestPrice()>Lowest Price</li>
+      <li (click)=highestPrice()>Highest Price</li>
+    </ul>
+  </div>
+</div>
+<div class="items">
+  <div class="item" *ngFor="let product of products">
+    <img [src]="product.img.url" alt="product.name" class="image">
+    <div class="info">
+      <p class="category">{{product.category}}</p>
+      <p class="name">{{product.name }} </p>
+    </div>
+    <div class="middle">
+      <p>{{product.cost}} <img src="../assets/icons/coin.svg" alt=""></p>
+      <div class="text" *ngIf="userData.points >= product.cost" (click)=redeemNowHandler(product)>REDEEM NOW</div>
+      <div class="text" *ngIf="userData.points < product.cost">Not enough points</div>
+    </div>
+  </div>
+</div>
